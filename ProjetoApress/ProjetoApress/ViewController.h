@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  NavigationProject
+//  ProjetoApress
 //
 //  Created by Treinamento on 29/07/17.
 //  Copyright © 2017 Treinamento. All rights reserved.
@@ -10,8 +10,9 @@
 
 @interface ViewController : UIViewController
 
-@property(nonatomic) int valor1;
-@property(nonatomic) int valor2;
+@property (weak, nonatomic) IBOutlet UIButton *btnEntrar;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmento;
+@property (weak, nonatomic) IBOutlet UILabel *labelValor;
 
 
 @end

@@ -26,25 +26,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Amarelo"/>
                                 <connections>
-                                    <segue destination="5f0-eB-v2r" kind="show" id="TtA-jU-lvb"/>
+                                    <segue destination="5f0-eB-v2r" kind="show" identifier="segueAmarelo" id="TtA-jU-lvb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDR-9a-bzr">
-                                <rect key="frame" x="128" y="308" width="82" height="30"/>
+                                <rect key="frame" x="131" y="231" width="82" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Vermelho"/>
                                 <connections>
-                                    <segue destination="GSM-HU-g1Q" kind="show" id="Ids-kV-U0p"/>
+                                    <segue destination="GSM-HU-g1Q" kind="show" identifier="segueVermelho" id="Ids-kV-U0p"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6a-DZ-Jak">
-                                <rect key="frame" x="164" y="493" width="46" height="30"/>
+                                <rect key="frame" x="149" y="326" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Azul"/>
                                 <connections>
-                                    <segue destination="L3q-dJ-Tr8" kind="show" id="awu-XG-4lo"/>
+                                    <segue destination="L3q-dJ-Tr8" kind="show" identifier="segueAzul" id="awu-XG-4lo"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="win" translatesAutoresizingMaskIntoConstraints="NO" id="5Fg-sI-zm1">
+                                <rect key="frame" x="112" y="511" width="150" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -56,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="104.8" y="-18.440779610194905"/>
         </scene>
-        <!--View Controller-->
+        <!--Vermelho View Controller-->
         <scene sceneID="v3M-ZB-g3l">
             <objects>
-                <viewController id="GSM-HU-g1Q" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VermelhoViewController" id="GSM-HU-g1Q" customClass="VermelhoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1y9-De-wNN"/>
                         <viewControllerLayoutGuide type="bottom" id="rpj-ho-bFX"/>
@@ -77,9 +81,19 @@
                                     <segue destination="K5A-FN-K2u" kind="show" id="Kum-zo-AaG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpP-ds-7ou">
+                                <rect key="frame" x="36" y="196" width="269" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="labelVer" destination="WpP-ds-7ou" id="KHd-Ti-ygn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0oq-Em-kYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="3548" y="-279.31034482758622"/>
         </scene>
-        <!--View Controller-->
+        <!--Azul View Controller-->
         <scene sceneID="pf4-kQ-WXZ">
             <objects>
-                <viewController id="L3q-dJ-Tr8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AzulViewController" id="L3q-dJ-Tr8" customClass="AzulViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RCE-5d-2ZW"/>
                         <viewControllerLayoutGuide type="bottom" id="9PH-EY-aSE"/>
@@ -166,13 +180,23 @@
                                     <segue destination="y3b-Cb-zTS" kind="show" id="VkQ-Qw-QdK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ly-sw-mC2">
+                                <rect key="frame" x="16" y="177" width="287" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="labelAzul" destination="6ly-sw-mC2" id="OdN-Ih-8rv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ypg-kI-XTU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="720"/>
+            <point key="canvasLocation" x="988" y="719.19040479760122"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HhX-b3-mV7">
@@ -263,7 +287,7 @@
         <!--Title Amarelo-->
         <scene sceneID="aqq-vk-Wvw">
             <objects>
-                <viewController id="5f0-eB-v2r" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AmareloViewController" id="5f0-eB-v2r" customClass="AmareloViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jJD-5G-SNA"/>
                         <viewControllerLayoutGuide type="bottom" id="lAX-jM-CgO"/>
@@ -280,10 +304,20 @@
                                     <segue destination="wk8-O0-ICI" kind="show" id="xxg-hS-eOp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5X-f0-dop">
+                                <rect key="frame" x="23" y="182" width="185" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title Amarelo" id="akZ-fd-8gR"/>
+                    <connections>
+                        <outlet property="labelAm" destination="U5X-f0-dop" id="BcG-kK-YFK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpk-hh-OH4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -360,6 +394,9 @@
             <point key="canvasLocation" x="-638" y="-17"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="win" width="500" height="500"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="woU-sk-8Gn"/>
     </inferredMetricsTieBreakers>

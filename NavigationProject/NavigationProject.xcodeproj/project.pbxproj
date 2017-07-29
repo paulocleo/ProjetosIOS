@@ -14,6 +14,9 @@
 		81811D691F2CD08000BAC319 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81811D681F2CD08000BAC319 /* Assets.xcassets */; };
 		81811D6C1F2CD08000BAC319 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81811D6A1F2CD08000BAC319 /* LaunchScreen.storyboard */; };
 		81811D751F2CD77D00BAC319 /* UltimaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81811D741F2CD77D00BAC319 /* UltimaViewController.m */; };
+		81811D781F2CF01800BAC319 /* AmareloViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81811D771F2CF01800BAC319 /* AmareloViewController.m */; };
+		81811D7B1F2CF02600BAC319 /* VermelhoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81811D7A1F2CF02600BAC319 /* VermelhoViewController.m */; };
+		81811D7E1F2CF03100BAC319 /* AzulViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81811D7D1F2CF03100BAC319 /* AzulViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,12 @@
 		81811D6D1F2CD08000BAC319 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81811D731F2CD77D00BAC319 /* UltimaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UltimaViewController.h; sourceTree = "<group>"; };
 		81811D741F2CD77D00BAC319 /* UltimaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UltimaViewController.m; sourceTree = "<group>"; };
+		81811D761F2CF01800BAC319 /* AmareloViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmareloViewController.h; sourceTree = "<group>"; };
+		81811D771F2CF01800BAC319 /* AmareloViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmareloViewController.m; sourceTree = "<group>"; };
+		81811D791F2CF02600BAC319 /* VermelhoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VermelhoViewController.h; sourceTree = "<group>"; };
+		81811D7A1F2CF02600BAC319 /* VermelhoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VermelhoViewController.m; sourceTree = "<group>"; };
+		81811D7C1F2CF03100BAC319 /* AzulViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AzulViewController.h; sourceTree = "<group>"; };
+		81811D7D1F2CF03100BAC319 /* AzulViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AzulViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,12 @@
 				81811D5C1F2CD08000BAC319 /* Supporting Files */,
 				81811D731F2CD77D00BAC319 /* UltimaViewController.h */,
 				81811D741F2CD77D00BAC319 /* UltimaViewController.m */,
+				81811D761F2CF01800BAC319 /* AmareloViewController.h */,
+				81811D771F2CF01800BAC319 /* AmareloViewController.m */,
+				81811D791F2CF02600BAC319 /* VermelhoViewController.h */,
+				81811D7A1F2CF02600BAC319 /* VermelhoViewController.m */,
+				81811D7C1F2CF03100BAC319 /* AzulViewController.h */,
+				81811D7D1F2CF03100BAC319 /* AzulViewController.m */,
 			);
 			path = NavigationProject;
 			sourceTree = "<group>";
@@ -156,7 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81811D751F2CD77D00BAC319 /* UltimaViewController.m in Sources */,
+				81811D781F2CF01800BAC319 /* AmareloViewController.m in Sources */,
+				81811D7B1F2CF02600BAC319 /* VermelhoViewController.m in Sources */,
 				81811D641F2CD08000BAC319 /* ViewController.m in Sources */,
+				81811D7E1F2CF03100BAC319 /* AzulViewController.m in Sources */,
 				81811D611F2CD08000BAC319 /* AppDelegate.m in Sources */,
 				81811D5E1F2CD08000BAC319 /* main.m in Sources */,
 			);

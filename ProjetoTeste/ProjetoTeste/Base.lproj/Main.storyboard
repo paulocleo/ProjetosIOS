@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="268"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vxl-Vl-B5p" id="72Y-W7-j50">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="267.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTF-jo-07u">

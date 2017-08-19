@@ -37,6 +37,10 @@
     }
     
     [self addGestureToMap];
+    
+    self.myTableView.hidden = true;
+    
+  
 }
 
 -(void)initLocationService{
@@ -207,6 +211,25 @@
     
     cell.textLabel.text = local;
     return cell;
+}
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation{
+    if([annotation isKindOfClass:[MKUserLocation class]]){
+        return nil;
+    }
+    
+    UIImage *image = [UIImage imageNamed:@"marker2"];
+    
+    MKAnnotationView *pinView = (MKAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"marker"];
+    
+    if(pinView != nil){
+        pinView.annotation = annotation;
+    }else{
+        pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"marker2"];
+        pinView.image = image;
+        
+    }
+    return pinView;
 }
 
 

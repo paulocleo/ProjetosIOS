@@ -89,6 +89,43 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    
+    NSLog(@"%li", (long)indexPath.row);
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"AViso" message:@"Escolha" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *apagar = [UIAlertAction actionWithTitle:@"Apagar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+    //processo apagar
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        
+        NSString *urlApagar =  [NSString stringWithFormat:@"https://teste-aula-ios.herokuapp.com/comments/%@.json", self.comments[indexPath.row][@"id"]];
+        
+        [SVProgressHUD show];
+        [manager DELETE:urlApagar
+          parameters:nil
+             success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                 [SVProgressHUD dismiss];
+                 //self.comments = [NSMutableArray arrayWithArray:responseObject];
+                 [self recarregarDados];
+             }    failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                 [SVProgressHUD dismiss];
+                 NSLog(@"Error: %@", error);
+             }];
+
+        
+    }];
+    
+    UIAlertAction *NaoApagar = [UIAlertAction actionWithTitle:@"Não Apagar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [alert addAction:apagar];
+    [alert addAction:NaoApagar];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 - (void) carregaProximaPagina {
     if (self.page == -1)
         return;
